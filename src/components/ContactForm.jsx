@@ -26,14 +26,14 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="section bg-[#050505]" id="contact">
+        <section className="section bg-[var(--color-bg)]" id="contact">
             <div className="container max-w-4xl">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="bg-[#121212] p-8 md:p-12 rounded-2xl border border-gray-800 shadow-2xl hover:shadow-[0_0_30px_rgba(198,255,0,0.05)] transition-shadow"
+                    className="bg-[var(--color-surface)] p-8 md:p-12 rounded-2xl border border-gray-800 shadow-2xl hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-shadow"
                 >
                     <div className="text-center mb-10">
                         <h2 className="text-3xl md:text-4xl mb-4">
@@ -51,7 +51,7 @@ const ContactForm = () => {
                                 type="text"
                                 name="name"
                                 required
-                                className="w-full bg-[#0a0a0a] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                className="w-full bg-[var(--color-surface)] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                                 placeholder="Seu nome"
                                 onChange={handleChange}
                             />

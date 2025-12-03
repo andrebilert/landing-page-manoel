@@ -5,7 +5,7 @@ const TrustedBy = () => {
     const universities = ["UNIVEL", "UNINGÁ", "UNICESUMAR", "UNIOPAR"];
 
     return (
-        <section className="py-12 border-y border-gray-900 bg-[#0a0a0a]">
+        <section className="py-12 border-y border-gray-900 bg-[var(--color-bg)]">
             <div className="container">
                 <p className="text-center text-gray-500 text-sm uppercase tracking-widest mb-8">Faculdades que confiam em nós</p>
                 <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">

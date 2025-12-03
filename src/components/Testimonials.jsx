@@ -28,7 +28,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <section className="section bg-[#0a0a0a]" id="testimonials">
+        <section className="section bg-[var(--color-bg)]" id="testimonials">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ const Testimonials = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="bg-[#121212] p-8 rounded-lg border border-gray-800 hover:border-[var(--color-primary)] transition-colors hover:-translate-y-2 duration-300"
+                            className="bg-[var(--color-surface)] p-8 rounded-lg border border-gray-800 hover:border-[var(--color-primary)] transition-colors hover:-translate-y-2 duration-300"
                         >
                             <div className="flex gap-1 mb-4 text-[var(--color-primary)]">
                                 {[...Array(item.stars)].map((_, i) => (

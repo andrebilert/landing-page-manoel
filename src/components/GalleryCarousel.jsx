@@ -22,7 +22,7 @@ const GalleryCarousel = () => {
     };
 
     return (
-        <section className="py-20 bg-black overflow-hidden relative">
+        <section className="py-20 bg-[var(--color-bg)] overflow-hidden relative">
             <div className="container text-center" style={{ marginBottom: '30px' }}>
                 <h2 className="text-3xl font-bold">Mais <span className="neon-text">Fotos</span></h2>
             </div>
@@ -44,7 +44,7 @@ const GalleryCarousel = () => {
                 {/* Left Button */}
                 <button
                     onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-                    className="absolute left-4 md:left-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-black hover:scale-110 transition-transform shadow-[0_0_20px_rgba(198,255,0,0.5)]"
+                    className="absolute left-4 md:left-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition-transform shadow-[0_0_20px_rgba(37,99,235,0.5)]"
                 >
                     <ChevronLeft size={24} />
                 </button>
@@ -123,7 +123,7 @@ const GalleryCarousel = () => {
                 {/* Right Button */}
                 <button
                     onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-                    className="absolute right-4 md:right-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-black hover:scale-110 transition-transform shadow-[0_0_20px_rgba(198,255,0,0.5)]"
+                    className="absolute right-4 md:right-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition-transform shadow-[0_0_20px_rgba(37,99,235,0.5)]"
                 >
                     <ChevronRight size={24} />
                 </button>

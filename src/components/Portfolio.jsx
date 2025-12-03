@@ -26,7 +26,7 @@ const categories = [
 
 const Portfolio = () => {
     return (
-        <section className="section bg-black" id="portfolio">
+        <section className="section bg-[var(--color-bg)]" id="portfolio">
             <div className="container">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl mb-4">Nosso <span className="neon-text">Portfólio</span></h2>

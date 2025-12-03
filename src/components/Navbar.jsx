@@ -25,8 +25,8 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-black/90 backdrop-blur-md py-2 border-b border-gray-800'
-                : 'bg-black md:bg-transparent py-2'
+                ? 'bg-[var(--color-bg)]/90 backdrop-blur-md py-2 border-b border-[var(--color-border)]'
+                : 'bg-[var(--color-bg)] md:bg-transparent py-2'
                 }`}
         >
             <div className="container flex justify-between items-center">
@@ -73,7 +73,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-black border-b border-gray-800 overflow-hidden"
+                        className="md:hidden bg-[var(--color-bg)] border-b border-[var(--color-border)] overflow-hidden"
                     >
                         <div className="container py-12 flex flex-col gap-6">
                             {navLinks.map((link) => (
@@ -89,7 +89,7 @@ const Navbar = () => {
                             <a
                                 href="https://wa.me/554491437348"
                                 target="_blank"
-                                className="flex items-center justify-center w-full py-3 rounded-lg bg-black text-white border border-gray-800 hover:bg-gray-900 transition-colors mb-4"
+                                className="flex items-center justify-center w-full py-3 rounded-lg bg-[var(--color-bg)] text-white border border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors mb-4"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 <MessageCircle size={20} className="mr-2" />

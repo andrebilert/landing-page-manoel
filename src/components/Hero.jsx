@@ -12,7 +12,7 @@ const Hero = () => {
           alt="Formatura"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/70 to-[var(--color-bg)]/30"></div>
       </div>
 
       <div className="container relative z-10 text-center px-4 pt-48 md:pt-0 pb-12 md:pb-0">
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-8 h-8 rounded-full bg-gray-700 border-2 border-black overflow-hidden">
+                <div key={i} className="w-8 h-8 rounded-full bg-[var(--color-surface)] border-2 border-[var(--color-bg)] overflow-hidden">
                   {/* Placeholder avatars */}
                   <div className="w-full h-full bg-gray-600"></div>
                 </div>

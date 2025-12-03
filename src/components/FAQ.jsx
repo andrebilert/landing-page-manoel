@@ -15,15 +15,15 @@ const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
     return (
-        <section id="faq" className="section bg-black">
+        <section id="faq" className="section bg-[var(--color-bg)]">
             <div className="container max-w-3xl">
                 <h2 className="text-3xl md:text-5xl text-center mb-12">Perguntas <span className="neon-text">Frequentes</span></h2>
 
                 <div className="space-y-4">
                     {faqs.map((item, index) => (
-                        <div key={index} className="border border-gray-800 rounded-lg overflow-hidden bg-[#121212]">
+                        <div key={index} className="border border-gray-800 rounded-lg overflow-hidden bg-[var(--color-surface)]">
                             <button
-                                className="w-full flex justify-between items-center p-6 text-left hover:bg-[#1a1a1a] transition-colors"
+                                className="w-full flex justify-between items-center p-6 text-left hover:bg-[var(--color-border)] transition-colors"
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                             >
                                 <span className="font-bold text-lg">{item.q}</span>

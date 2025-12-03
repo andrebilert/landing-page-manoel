@@ -13,7 +13,7 @@ const benefits = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="section bg-black">
+        <section className="section bg-[var(--color-bg)]">
             <div className="container">
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                     <div className="md:w-1/2">
@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.3, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="p-6 bg-[#121212] rounded-lg border border-gray-800 hover:border-[var(--color-primary)] transition-all group hover:shadow-[0_0_20px_rgba(198,255,0,0.1)]"
+                                className="p-6 bg-[var(--color-surface)] rounded-lg border border-gray-800 hover:border-[var(--color-primary)] transition-all group hover:shadow-[0_0_20px_rgba(37,99,235,0.1)]"
                             >
                                 <item.icon className="w-10 h-10 text-[var(--color-primary)] mb-4 group-hover:scale-110 transition-transform" />
                                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>

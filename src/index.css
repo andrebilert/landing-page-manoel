@@ -3,11 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #C6FF00;
-  --color-bg: #050505;
-  --color-surface: #121212;
-  --color-text: #FFFFFF;
-  --color-text-muted: #A1A1AA;
+  --color-primary: #2563EB;
+  /* azul royal */
+  --color-primary-soft: #3B82F6;
+  /* hover */
+  --color-bg: #020617;
+  /* fundo escuro elegante */
+  --color-surface: #0B1120;
+  /* seções / containers */
+  --color-text: #F9FAFB;
+  /* texto principal */
+  --color-text-muted: #94A3B8;
+  /* subtítulos */
+  --color-border: #1E293B;
+  /* bordas suaves */
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -83,24 +92,24 @@ img {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: #000;
+  color: #F9FAFB;
 }
 
 .btn-primary:hover {
-  background-color: #b3e600;
+  background-color: var(--color-primary-soft);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(198, 255, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
 }
 
 .btn-outline {
-  border: 2px solid var(--color-text);
-  color: var(--color-text);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
   background: transparent;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-text);
-  color: #000;
+  background-color: var(--color-primary);
+  color: #F9FAFB;
   transform: translateY(-2px);
 }
 

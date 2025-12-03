@@ -3,7 +3,7 @@ import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#050505] border-t border-gray-900 pt-16 pb-8">
+        <footer className="bg-[var(--color-bg)] border-t border-gray-900 pt-16 pb-8">
             <div className="container">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     <div className="md:col-span-2">
@@ -25,7 +25,7 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold mb-4 text-white">Redes Sociais</h4>
                         <div className="flex gap-4">
-                            <a href="https://www.instagram.com/hmarcianofoto/" target="_blank" className="w-10 h-10 rounded-full bg-[#121212] flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-black transition-colors">
+                            <a href="https://www.instagram.com/hmarcianofoto/" target="_blank" className="w-10 h-10 rounded-full bg-[var(--color-surface)] flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition-colors">
                                 <Instagram size={20} />
                             </a>
                         </div>
