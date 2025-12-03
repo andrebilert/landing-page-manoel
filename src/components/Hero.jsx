@@ -23,12 +23,10 @@ const Hero = () => {
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 mt-32 md:mt-0 leading-tight">
             A formatura é única.<br />
-            <span className="neon-text">Suas fotos também devem ser.</span>
+            <span className="highlight">Suas fotos também devem ser.</span>
           </h1>
 
-          <p className="text-[var(--color-text-muted)] text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">
-            +20 mil cliques, +15 mil formandos, +500 turmas registradas
-          </p>
+
 
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
             <a href="#contact" className="btn btn-primary w-full md:w-auto">
@@ -41,18 +39,10 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Social Proof */}
-          <div className="flex items-center justify-center gap-2 text-sm text-[var(--color-text-muted)]">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-8 h-8 rounded-full bg-[var(--color-surface)] border-2 border-[var(--color-bg)] overflow-hidden">
-                  {/* Placeholder avatars */}
-                  <div className="w-full h-full bg-gray-600"></div>
-                </div>
-              ))}
-            </div>
-            <span>+500 formandos felizes esse mês</span>
-          </div>
+          <p className="text-[var(--color-text-muted)] text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">
+            Mais de 10 anos de experiência — Especialista em Formaturas
+          </p>
+
         </motion.div>
       </div>
     </section>

@@ -29,7 +29,7 @@ const Portfolio = () => {
         <section className="section bg-[var(--color-bg)]" id="portfolio">
             <div className="container">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl mb-4">Nosso <span className="neon-text">Portfólio</span></h2>
+                    <h2 className="text-3xl md:text-5xl mb-4">Nosso <span className="highlight">Portfólio</span></h2>
                     <p className="text-[var(--color-text-muted)] max-w-2xl mx-auto">
                         Cada clique conta uma história de sucesso. Confira nossos trabalhos recentes.
                     </p>
@@ -55,7 +55,7 @@ const Portfolio = () => {
                                 <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-[var(--color-primary)] transition-colors">
                                     {cat.title}
                                 </h3>
-                                <p className="text-gray-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                <p className="text-[var(--color-text-muted)] transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                     {cat.desc}
                                 </p>
                             </div>

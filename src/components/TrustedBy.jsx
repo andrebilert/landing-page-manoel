@@ -15,7 +15,7 @@ const TrustedBy = () => {
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="text-2xl md:text-3xl font-bold text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                            className="text-2xl md:text-3xl font-bold text-[var(--color-text-muted)] hover:text-white transition-colors"
                         >
                             {uni}
                         </motion.div>

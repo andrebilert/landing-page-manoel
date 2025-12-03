@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
                         >
                             <h2 className="text-3xl md:text-5xl mb-6">
                                 Por que escolher a <br />
-                                <span className="neon-text">nossa fotografia?</span>
+                                <span className="highlight">nossa fotografia?</span>
                             </h2>
                             <p className="text-[var(--color-text-muted)] mb-8 text-lg">
                                 Não entregamos apenas fotos, entregamos memórias eternizadas com a máxima qualidade técnica e artística.
@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.3, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="p-6 bg-[var(--color-surface)] rounded-lg border border-gray-800 hover:border-[var(--color-primary)] transition-all group hover:shadow-[0_0_20px_rgba(37,99,235,0.1)]"
+                                className="p-6 bg-[var(--color-surface)] rounded-lg border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-all group hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                             >
                                 <item.icon className="w-10 h-10 text-[var(--color-primary)] mb-4 group-hover:scale-110 transition-transform" />
                                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>

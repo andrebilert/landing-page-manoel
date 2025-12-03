@@ -4,17 +4,12 @@ export default {
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
-    darkMode: 'class',
     theme: {
         extend: {
             colors: {
-                primary: 'var(--color-primary)',
-                'primary-soft': 'var(--color-primary-soft)',
-                bg: 'var(--color-bg)',
-                surface: 'var(--color-surface)',
-                text: 'var(--color-text)',
-                'text-muted': 'var(--color-text-muted)',
-                border: 'var(--color-border)',
+                primary: '#C6FF00',
+                bg: '#050505',
+                surface: '#121212',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

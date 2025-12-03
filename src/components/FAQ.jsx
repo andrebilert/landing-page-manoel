@@ -17,7 +17,7 @@ const FAQ = () => {
     return (
         <section id="faq" className="section bg-[var(--color-bg)]">
             <div className="container max-w-3xl">
-                <h2 className="text-3xl md:text-5xl text-center mb-12">Perguntas <span className="neon-text">Frequentes</span></h2>
+                <h2 className="text-3xl md:text-5xl text-center mb-12">Perguntas <span className="highlight">Frequentes</span></h2>
 
                 <div className="space-y-4">
                     {faqs.map((item, index) => (

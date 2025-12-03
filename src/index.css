@@ -3,45 +3,22 @@
 @tailwind utilities;
 
 :root {
-  /* Light Mode (Default) */
-  --color-primary: #2563EB;
-  /* azul royal */
-  --color-primary-soft: #3B82F6;
-  /* hover */
-  --color-bg: #FFFFFF;
-  /* fundo branco */
-  --color-surface: #F3F4F6;
-  /* cinza claro */
-  --color-text: #111827;
-  /* texto escuro */
-  --color-text-muted: #4B5563;
-  /* cinza mais escuro para melhor contraste */
-  --color-border: #E5E7EB;
-  /* borda clara */
+  --color-bg: #1F1F1F;
+  --color-surface: #262626;
+  --color-text: #F5F5F5;
+  --color-text-muted: #D4D4D4;
+  --color-lines: #CCCCCC;
+  --color-highlight: #E0E0E0;
+  --color-border: var(--color-lines);
 
-  --font-heading: 'Outfit', sans-serif;
+  --color-primary: #FFFFFF;
+  --color-primary-soft: #E5E5E5;
+
+  --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
   --transition-fast: 0.2s ease;
   --transition-medium: 0.4s ease;
-}
-
-.dark {
-  /* Dark Mode */
-  --color-primary: #2563EB;
-  /* azul royal */
-  --color-primary-soft: #3B82F6;
-  /* hover */
-  --color-bg: #020617;
-  /* fundo escuro elegante */
-  --color-surface: #0B1120;
-  /* seções / containers */
-  --color-text: #F9FAFB;
-  /* texto principal */
-  --color-text-muted: #94A3B8;
-  /* subtítulos */
-  --color-border: #1E293B;
-  /* bordas suaves */
 }
 
 * {
@@ -67,6 +44,8 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 a {
@@ -111,13 +90,13 @@ img {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: #F9FAFB;
+  color: #000000;
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-soft);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
 }
 
 .btn-outline {
@@ -128,7 +107,7 @@ img {
 
 .btn-outline:hover {
   background-color: var(--color-primary);
-  color: #F9FAFB;
+  color: #000000;
   transform: translateY(-2px);
 }
 
@@ -140,6 +119,11 @@ img {
 
 .neon-text {
   color: var(--color-primary);
+}
+
+.highlight {
+  color: var(--color-highlight);
+  font-weight: 300;
 }
 
 /* Scrollbar */

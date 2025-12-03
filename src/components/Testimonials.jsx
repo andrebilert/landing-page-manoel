@@ -36,7 +36,7 @@ const Testimonials = () => {
                     transition={{ duration: 0.6 }}
                     className="text-3xl md:text-5xl text-center mb-16"
                 >
-                    O que falam de <span className="neon-text">nós</span>
+                    O que falam de <span className="highlight">nós</span>
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -60,7 +60,7 @@ const Testimonials = () => {
                                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-[var(--color-text)]">{item.name}</h4>
+                                    <h4 className="font-bold text-white">{item.name}</h4>
                                     <p className="text-sm text-[var(--color-text-muted)]">{item.course}</p>
                                 </div>
                             </div>

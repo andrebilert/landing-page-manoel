@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Menu, X, Sun, Moon } from 'lucide-react';
+import { MessageCircle, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,11 +32,7 @@ const Navbar = () => {
             <div className="container flex justify-between items-center">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2">
-                    <img
-                        src={theme === 'dark' ? "assets/logo.png" : "assets/logo-black.png"}
-                        alt="Hmarciano Logo"
-                        className="h-10 md:h-16 w-auto object-contain"
-                    />
+                    <img src="assets/logo.png" alt="Hmarciano Logo" className="h-10 md:h-16 w-auto object-contain" />
                 </a>
 
                 {/* Desktop Menu */}
@@ -47,19 +41,11 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors uppercase tracking-wide"
+                            className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors uppercase tracking-wide"
                         >
                             {link.name}
                         </a>
                     ))}
-
-                    <button
-                        onClick={toggleTheme}
-                        className="p-2 rounded-full hover:bg-[var(--color-surface)] transition-colors text-[var(--color-text)]"
-                        aria-label="Toggle Theme"
-                    >
-                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
 
                     <a
                         href="https://wa.me/554491437348"
@@ -72,20 +58,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <div className="md:hidden flex items-center gap-4">
-                    <button
-                        onClick={toggleTheme}
-                        className="p-2 rounded-full hover:bg-[var(--color-surface)] transition-colors text-[var(--color-text)]"
-                    >
-                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
-                    <button
-                        className="text-[var(--color-text)]"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-                </div>
+                <button
+                    className="md:hidden text-white"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
             </div>
 
             {/* Mobile Menu Overlay */}
@@ -102,7 +80,7 @@ const Navbar = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    className="text-lg font-medium text-[var(--color-text)] hover:text-[var(--color-primary)]"
+                                    className="text-lg font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)]"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
@@ -111,7 +89,7 @@ const Navbar = () => {
                             <a
                                 href="https://wa.me/554491437348"
                                 target="_blank"
-                                className="flex items-center justify-center w-full py-3 rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors mb-4"
+                                className="flex items-center justify-center w-full py-3 rounded-lg bg-[var(--color-bg)] text-white border border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors mb-4"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 <MessageCircle size={20} className="mr-2" />
