@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    "/assets/portfolio-1.png",
-    "/assets/portfolio-2.png",
-    "/assets/portfolio-3.png",
-    "/assets/portfolio-4.png",
-    "/assets/portfolio-1.png"
+    "assets/portfolio-1.png",
+    "assets/portfolio-2.png",
+    "assets/portfolio-3.png",
+    "assets/portfolio-4.png",
+    "assets/portfolio-1.png"
 ];
 
 const GalleryCarousel = () => {

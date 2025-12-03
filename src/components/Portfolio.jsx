@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 const categories = [
     {
         title: "Formaturas Individuais",
-        image: "/assets/portfolio-1.png",
+        image: "assets/portfolio-1.png",
         desc: "Ensaios exclusivos e personalizados"
     },
     {
         title: "Formaturas Coletivas",
-        image: "/assets/portfolio-2.png",
+        image: "assets/portfolio-2.png",
         desc: "Cobertura completa da sua turma"
     },
     {
         title: "Ensaios Studio",
-        image: "/assets/portfolio-3.png",
+        image: "assets/portfolio-3.png",
         desc: "Produção cinematográfica em estúdio"
     },
     {
         title: "Eventos e Bailes",
-        image: "/assets/portfolio-4.png",
+        image: "assets/portfolio-4.png",
         desc: "A festa mais esperada da sua vida"
     }
 ];

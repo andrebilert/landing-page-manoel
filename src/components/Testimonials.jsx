@@ -8,21 +8,21 @@ const testimonials = [
         course: "Medicina - Unicesumar",
         text: "Simplesmente incrível! As fotos ficaram maravilhosas, o fotógrafo me deixou super à vontade. Recomendo demais!",
         stars: 5,
-        image: "/assets/testimonial-1.png"
+        image: "assets/testimonial-1.png"
     },
     {
         name: "Carlos Oliveira",
         course: "Direito - Uningá",
         text: "Profissionalismo nota 1000. A entrega foi rápida e a qualidade das fotos é de cinema. Muito obrigado!",
         stars: 5,
-        image: "/assets/testimonial-2.png"
+        image: "assets/testimonial-2.png"
     },
     {
         name: "Mariana Santos",
         course: "Odontologia - Unopar",
         text: "Melhor investimento da minha formatura. As fotos capturaram toda a emoção do momento. Amei cada detalhe.",
         stars: 5,
-        image: "/assets/testimonial-3.png"
+        image: "assets/testimonial-3.png"
     }
 ];
 
