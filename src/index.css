@@ -8,13 +8,13 @@
   --color-text: #F5F5F5;
   --color-text-muted: #D4D4D4;
   --color-lines: #CCCCCC;
-  --color-highlight: #E0E0E0;
+  --color-highlight: #D1D5DB;
   --color-border: var(--color-lines);
 
   --color-primary: #FFFFFF;
   --color-primary-soft: #E5E5E5;
 
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
 
   --transition-fast: 0.2s ease;
@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -123,7 +123,7 @@ img {
 
 .highlight {
   color: var(--color-highlight);
-  font-weight: 300;
+  font-weight: 700;
 }
 
 /* Scrollbar */
