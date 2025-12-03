@@ -21,12 +21,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 mt-32 md:mt-0 leading-tight">
+          <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 mt-32 md:mt-0 leading-tight">
             A formatura é única.<br />
             <span className="highlight whitespace-nowrap">Suas fotos também devem ser.</span>
           </h1>
 
-          <p className="text-[var(--color-text-muted)] text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">
+          <p className="text-[var(--color-text-muted)] text-lg md:text-xl mb-16 max-w-2xl mx-auto font-light">
             Mais de 10 anos de experiência — Especialista em Formaturas
           </p>
 
