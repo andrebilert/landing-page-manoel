@@ -94,7 +94,7 @@ const GalleryCarousel = () => {
                     return (
                         <motion.div
                             key={index}
-                            className="absolute w-[300px] h-[450px] md:w-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border border-gray-800"
+                            className="absolute w-[300px] h-[450px] md:w-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl border border-[var(--color-border)]"
                             initial={false}
                             animate={{
                                 x,

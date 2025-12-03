@@ -30,7 +30,7 @@ const Portfolio = () => {
             <div className="container">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl mb-4">Nosso <span className="neon-text">Portfólio</span></h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-[var(--color-text-muted)] max-w-2xl mx-auto">
                         Cada clique conta uma história de sucesso. Confira nossos trabalhos recentes.
                     </p>
                 </div>

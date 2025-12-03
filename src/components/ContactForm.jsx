@@ -33,73 +33,73 @@ const ContactForm = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="bg-[var(--color-surface)] p-8 md:p-12 rounded-2xl border border-gray-800 shadow-2xl hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-shadow"
+                    className="bg-[var(--color-surface)] p-8 md:p-12 rounded-2xl border border-[var(--color-border)] shadow-2xl hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-shadow"
                 >
                     <div className="text-center mb-10">
                         <h2 className="text-3xl md:text-4xl mb-4">
                             Garanta as <span className="neon-text">melhores fotos</span> da sua formatura
                         </h2>
-                        <p className="text-gray-400">
+                        <p className="text-[var(--color-text-muted)]">
                             Preencha o formulário abaixo e entraremos em contato rapidamente.
                         </p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400">Nome Completo</label>
+                            <label className="text-sm text-[var(--color-text-muted)]">Nome Completo</label>
                             <input
                                 type="text"
                                 name="name"
                                 required
-                                className="w-full bg-[var(--color-surface)] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                className="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                                 placeholder="Seu nome"
                                 onChange={handleChange}
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400">Curso</label>
+                            <label className="text-sm text-[var(--color-text-muted)]">Curso</label>
                             <input
                                 type="text"
                                 name="course"
                                 required
-                                className="w-full bg-[#0a0a0a] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                className="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                                 placeholder="Ex: Medicina"
                                 onChange={handleChange}
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400">Data da Formatura</label>
+                            <label className="text-sm text-[var(--color-text-muted)]">Data da Formatura</label>
                             <input
                                 type="date"
                                 name="date"
                                 required
                                 min={new Date().toISOString().split('T')[0]}
-                                className="w-full bg-[#0a0a0a] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                className="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                                 onChange={handleChange}
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400">Instituição/Faculdade</label>
+                            <label className="text-sm text-[var(--color-text-muted)]">Instituição/Faculdade</label>
                             <input
                                 type="text"
                                 name="institution"
                                 required
-                                className="w-full bg-[#0a0a0a] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                className="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                                 placeholder="Ex: Unicesumar"
                                 onChange={handleChange}
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400">Cidade</label>
+                            <label className="text-sm text-[var(--color-text-muted)]">Cidade</label>
                             <input
                                 type="text"
                                 name="city"
                                 required
-                                className="w-full bg-[#0a0a0a] border border-gray-700 rounded p-3 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                className="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                                 placeholder="Ex: Maringá"
                                 onChange={handleChange}
                             />

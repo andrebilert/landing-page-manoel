@@ -47,21 +47,21 @@ const Testimonials = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="bg-[var(--color-surface)] p-8 rounded-lg border border-gray-800 hover:border-[var(--color-primary)] transition-colors hover:-translate-y-2 duration-300"
+                            className="bg-[var(--color-surface)] p-8 rounded-lg border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-colors hover:-translate-y-2 duration-300"
                         >
                             <div className="flex gap-1 mb-4 text-[var(--color-primary)]">
                                 {[...Array(item.stars)].map((_, i) => (
                                     <Star key={i} fill="currentColor" size={20} />
                                 ))}
                             </div>
-                            <p className="text-gray-300 mb-6 italic">"{item.text}"</p>
+                            <p className="text-[var(--color-text-muted)] mb-6 italic">"{item.text}"</p>
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-700">
+                                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--color-border)]">
                                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-white">{item.name}</h4>
-                                    <p className="text-sm text-gray-500">{item.course}</p>
+                                    <h4 className="font-bold text-[var(--color-text)]">{item.name}</h4>
+                                    <p className="text-sm text-[var(--color-text-muted)]">{item.course}</p>
                                 </div>
                             </div>
                         </motion.div>

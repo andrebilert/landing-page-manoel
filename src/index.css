@@ -3,6 +3,31 @@
 @tailwind utilities;
 
 :root {
+  /* Light Mode (Default) */
+  --color-primary: #2563EB;
+  /* azul royal */
+  --color-primary-soft: #3B82F6;
+  /* hover */
+  --color-bg: #FFFFFF;
+  /* fundo branco */
+  --color-surface: #F3F4F6;
+  /* cinza claro */
+  --color-text: #111827;
+  /* texto escuro */
+  --color-text-muted: #4B5563;
+  /* cinza mais escuro para melhor contraste */
+  --color-border: #E5E7EB;
+  /* borda clara */
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+}
+
+.dark {
+  /* Dark Mode */
   --color-primary: #2563EB;
   /* azul royal */
   --color-primary-soft: #3B82F6;
@@ -17,12 +42,6 @@
   /* subtítulos */
   --color-border: #1E293B;
   /* bordas suaves */
-
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  --transition-fast: 0.2s ease;
-  --transition-medium: 0.4s ease;
 }
 
 * {

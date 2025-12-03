@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
                                 Por que escolher a <br />
                                 <span className="neon-text">nossa fotografia?</span>
                             </h2>
-                            <p className="text-gray-400 mb-8 text-lg">
+                            <p className="text-[var(--color-text-muted)] mb-8 text-lg">
                                 Não entregamos apenas fotos, entregamos memórias eternizadas com a máxima qualidade técnica e artística.
                             </p>
                             <a href="#contact" className="btn btn-primary">
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
                             >
                                 <item.icon className="w-10 h-10 text-[var(--color-primary)] mb-4 group-hover:scale-110 transition-transform" />
                                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                                <p className="text-sm text-gray-400">{item.desc}</p>
+                                <p className="text-sm text-[var(--color-text-muted)]">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>

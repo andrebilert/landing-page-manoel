@@ -11,21 +11,25 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      <Hero />
-      <Portfolio />
-      <Testimonials />
-      <WhyChooseUs />
-      <TrustedBy />
-      <GalleryCarousel />
-      <ContactForm />
-      <FAQ />
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300">
+        <Navbar />
+        <Hero />
+        <Portfolio />
+        <Testimonials />
+        <WhyChooseUs />
+        <TrustedBy />
+        <GalleryCarousel />
+        <ContactForm />
+        <FAQ />
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </ThemeProvider>
   );
 }
 

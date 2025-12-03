@@ -26,7 +26,7 @@ const Hero = () => {
             <span className="neon-text">Suas fotos também devem ser.</span>
           </h1>
 
-          <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">
+          <p className="text-[var(--color-text-muted)] text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">
             +20 mil cliques, +15 mil formandos, +500 turmas registradas
           </p>
 
@@ -42,7 +42,7 @@ const Hero = () => {
           </div>
 
           {/* Social Proof */}
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+          <div className="flex items-center justify-center gap-2 text-sm text-[var(--color-text-muted)]">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="w-8 h-8 rounded-full bg-[var(--color-surface)] border-2 border-[var(--color-bg)] overflow-hidden">

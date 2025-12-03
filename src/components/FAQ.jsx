@@ -21,19 +21,19 @@ const FAQ = () => {
 
                 <div className="space-y-4">
                     {faqs.map((item, index) => (
-                        <div key={index} className="border border-gray-800 rounded-lg overflow-hidden bg-[var(--color-surface)]">
+                        <div key={index} className="border border-[var(--color-border)] rounded-lg overflow-hidden bg-[var(--color-surface)]">
                             <button
                                 className="w-full flex justify-between items-center p-6 text-left hover:bg-[var(--color-border)] transition-colors"
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                             >
                                 <span className="font-bold text-lg">{item.q}</span>
-                                {openIndex === index ? <ChevronUp className="text-[var(--color-primary)]" /> : <ChevronDown className="text-gray-500" />}
+                                {openIndex === index ? <ChevronUp className="text-[var(--color-primary)]" /> : <ChevronDown className="text-[var(--color-text-muted)]" />}
                             </button>
 
                             <div
                                 className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-40 p-6 pt-0' : 'max-h-0'}`}
                             >
-                                <p className="text-gray-400">{item.a}</p>
+                                <p className="text-[var(--color-text-muted)]">{item.a}</p>
                             </div>
                         </div>
                     ))}
