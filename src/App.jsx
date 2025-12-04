@@ -21,8 +21,8 @@ function App() {
       <WhyChooseUs />
       <TrustedBy />
       <GalleryCarousel />
-      <ContactForm />
       <FAQ />
+      <ContactForm />
       <Footer />
       <WhatsAppButton />
     </div>
