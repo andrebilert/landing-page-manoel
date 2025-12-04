@@ -8,21 +8,21 @@ const testimonials = [
         course: "Medicina - Unicesumar",
         text: "Simplesmente incrível! As fotos ficaram maravilhosas, o fotógrafo me deixou super à vontade. Recomendo demais!",
         stars: 5,
-        image: "assets/testimonial-1.png"
+        image: "assets/testimonial-1.webp"
     },
     {
         name: "Carlos Oliveira",
         course: "Direito - Uningá",
         text: "Profissionalismo nota 1000. A entrega foi rápida e a qualidade das fotos é de cinema. Muito obrigado!",
         stars: 5,
-        image: "assets/testimonial-2.png"
+        image: "assets/testimonial-2.webp"
     },
     {
         name: "Mariana Santos",
         course: "Odontologia - Unopar",
         text: "Melhor investimento da minha formatura. As fotos capturaram toda a emoção do momento. Amei cada detalhe.",
         stars: 5,
-        image: "assets/testimonial-3.png"
+        image: "assets/testimonial-3.webp"
     }
 ];
 
@@ -57,7 +57,7 @@ const Testimonials = () => {
                             <p className="text-[var(--color-text-muted)] mb-6 italic">"{item.text}"</p>
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--color-border)]">
-                                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" loading="lazy" width="48" height="48" />
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-white">{item.name}</h4>

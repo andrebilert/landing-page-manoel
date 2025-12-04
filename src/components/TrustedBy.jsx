@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const TrustedBy = () => {
     const universities = [
-        { name: "UEM", logo: "assets/uem.png" },
-        { name: "UNOPAR", logo: "assets/unopar.png" },
-        { name: "UNINGÁ", logo: "assets/uninga.png" },
-        { name: "UNICESUMAR", logo: "assets/unicesumar-logo.png" }
+        { name: "UEM", logo: "assets/uem.webp" },
+        { name: "UNOPAR", logo: "assets/unopar.webp" },
+        { name: "UNINGÁ", logo: "assets/uninga.webp" },
+        { name: "UNICESUMAR", logo: "assets/unicesumar-logo.webp" }
     ];
 
     return (
@@ -27,6 +27,9 @@ const TrustedBy = () => {
                                 src={uni.logo}
                                 alt={uni.name}
                                 className="h-32 md:h-48 w-auto object-contain"
+                                loading="lazy"
+                                width="300"
+                                height="200"
                             />
                         </motion.div>
                     ))}

@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    "assets/portfolio-1.png",
-    "assets/portfolio-2.png",
-    "assets/portfolio-3.png",
-    "assets/portfolio-4.png",
-    "assets/portfolio-1.png"
+    "assets/portfolio-1.webp",
+    "assets/portfolio-2.webp",
+    "assets/portfolio-3.webp",
+    "assets/portfolio-4.webp",
+    "assets/portfolio-1.webp"
 ];
 
 const GalleryCarousel = () => {
@@ -113,6 +113,8 @@ const GalleryCarousel = () => {
                                 src={img}
                                 alt={`Gallery ${index}`}
                                 className="w-full h-full object-cover pointer-events-none"
+                                width="400"
+                                height="500"
                             />
                             {/* Overlay for non-active images */}
                             <div className={`absolute inset-0 bg-black transition-opacity duration-500 ${offset === 0 ? 'opacity-0' : 'opacity-50'}`}></div>
