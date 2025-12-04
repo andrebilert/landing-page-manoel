@@ -29,6 +29,7 @@ const WhatsAppButton = () => {
                 whileTap={{ scale: 0.9 }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                aria-label="Falar no WhatsApp"
             >
                 <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></div>
                 <MessageCircle size={28} fill="white" className="relative z-10" />
