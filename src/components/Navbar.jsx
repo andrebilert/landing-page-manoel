@@ -31,7 +31,7 @@ const Navbar = () => {
         >
             <div className="container flex justify-between items-center">
                 {/* Logo */}
-                <a href="#" className="flex items-center gap-2">
+                <a href="#" className="flex items-center gap-2" aria-label="Página inicial">
                     <img src="assets/logo.webp" alt="Henrique Marciano Logo" className="h-10 md:h-16 w-auto object-contain" width="200" height="64" />
                 </a>
 
@@ -54,6 +54,7 @@ const Navbar = () => {
                 <button
                     className="md:hidden text-white"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Abrir menu de navegação"
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>

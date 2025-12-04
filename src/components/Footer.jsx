@@ -25,7 +25,7 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold mb-4 text-white">Redes Sociais</h4>
                         <div className="flex gap-4">
-                            <a href="https://www.instagram.com/hmarcianofoto/" target="_blank" className="w-10 h-10 rounded-full bg-[var(--color-surface)] flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-black transition-colors">
+                            <a href="https://www.instagram.com/hmarcianofoto/" target="_blank" aria-label="Siga-nos no Instagram" className="w-10 h-10 rounded-full bg-[var(--color-surface)] flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-black transition-colors">
                                 <Instagram size={20} />
                             </a>
                         </div>

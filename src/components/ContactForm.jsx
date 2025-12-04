@@ -46,9 +46,10 @@ const ContactForm = () => {
 
                     <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                            <label className="text-sm text-[var(--color-text-muted)]">Nome Completo</label>
+                            <label htmlFor="name" className="text-sm text-[var(--color-text-muted)]">Nome Completo</label>
                             <input
                                 type="text"
+                                id="name"
                                 name="name"
                                 required
                                 className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
@@ -58,9 +59,23 @@ const ContactForm = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-[var(--color-text-muted)]">Curso</label>
+                            <label htmlFor="whatsapp" className="text-sm text-[var(--color-text-muted)]">WhatsApp</label>
+                            <input
+                                type="tel"
+                                id="whatsapp"
+                                name="whatsapp"
+                                required
+                                className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                                placeholder="(44) 99999-9999"
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label htmlFor="course" className="text-sm text-[var(--color-text-muted)]">Curso</label>
                             <input
                                 type="text"
+                                id="course"
                                 name="course"
                                 required
                                 className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
@@ -70,9 +85,10 @@ const ContactForm = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-[var(--color-text-muted)]">Data da Formatura</label>
+                            <label htmlFor="date" className="text-sm text-[var(--color-text-muted)]">Data da Formatura</label>
                             <input
                                 type="date"
+                                id="date"
                                 name="date"
                                 required
                                 min={new Date().toISOString().split('T')[0]}
@@ -82,9 +98,10 @@ const ContactForm = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-[var(--color-text-muted)]">Instituição/Faculdade</label>
+                            <label htmlFor="institution" className="text-sm text-[var(--color-text-muted)]">Instituição/Faculdade</label>
                             <input
                                 type="text"
+                                id="institution"
                                 name="institution"
                                 required
                                 className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"
@@ -94,9 +111,10 @@ const ContactForm = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-[var(--color-text-muted)]">Cidade</label>
+                            <label htmlFor="city" className="text-sm text-[var(--color-text-muted)]">Cidade</label>
                             <input
                                 type="text"
+                                id="city"
                                 name="city"
                                 required
                                 className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded p-3 text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-none transition-colors"

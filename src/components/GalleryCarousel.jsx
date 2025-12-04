@@ -45,6 +45,7 @@ const GalleryCarousel = () => {
                 <button
                     onClick={(e) => { e.stopPropagation(); prevSlide(); }}
                     className="absolute left-4 md:left-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-black hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    aria-label="Imagem anterior"
                 >
                     <ChevronLeft size={24} />
                 </button>
@@ -111,7 +112,7 @@ const GalleryCarousel = () => {
                         >
                             <img
                                 src={img}
-                                alt={`Gallery ${index}`}
+                                alt={`Foto do portfólio ${index + 1}`}
                                 className="w-full h-full object-cover pointer-events-none"
                                 width="400"
                                 height="500"
@@ -126,6 +127,7 @@ const GalleryCarousel = () => {
                 <button
                     onClick={(e) => { e.stopPropagation(); nextSlide(); }}
                     className="absolute right-4 md:right-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-black hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    aria-label="Próxima imagem"
                 >
                     <ChevronRight size={24} />
                 </button>

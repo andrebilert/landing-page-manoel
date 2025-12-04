@@ -60,7 +60,7 @@ const Testimonials = () => {
                                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" loading="lazy" width="48" height="48" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-white">{item.name}</h4>
+                                    <h3 className="font-bold text-white">{item.name}</h3>
                                     <p className="text-sm text-[var(--color-text-muted)]">{item.course}</p>
                                 </div>
                             </div>
