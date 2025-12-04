@@ -11,21 +11,25 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
+import { LazyMotion, domAnimation } from "framer-motion"
+
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      <Hero />
-      <Portfolio />
-      <GalleryCarousel />
-      <Testimonials />
-      <WhyChooseUs />
-      <TrustedBy />
-      <FAQ />
-      <ContactForm />
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <LazyMotion features={domAnimation}>
+      <div className="min-h-screen bg-black text-white">
+        <Navbar />
+        <Hero />
+        <Portfolio />
+        <GalleryCarousel />
+        <Testimonials />
+        <WhyChooseUs />
+        <TrustedBy />
+        <FAQ />
+        <ContactForm />
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </LazyMotion>
   );
 }
 

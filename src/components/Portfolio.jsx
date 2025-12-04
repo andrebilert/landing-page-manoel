@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 const categories = [
     {
         title: "Formaturas",
-        image: "assets/portfolio-1.png",
+        image: "assets/portfolio-1.webp",
         desc: "Ensaios exclusivos que capturam a sua essência e conquista."
     },
     {
         title: "Colação de Grau",
-        image: "assets/portfolio-2.png",
+        image: "assets/portfolio-2.webp",
         desc: "O registro emocionante da sua cerimônia oficial."
     },
     {
         title: "Missa",
-        image: "assets/portfolio-3.png",
+        image: "assets/portfolio-3.webp",
         desc: "A emoção e a fé celebradas em cada detalhe."
     },
     {
         title: "Foto Convite",
-        image: "assets/portfolio-4.png",
+        image: "assets/portfolio-4.webp",
         desc: "Convites criativos para marcar a data mais esperada."
     }
 ];
@@ -64,12 +64,18 @@ const Portfolio = () => {
                                     whileInView={{ filter: 'grayscale(0%)' }}
                                     viewport={{ margin: "-40% 0px -40% 0px" }}
                                     transition={{ duration: 0.5 }}
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
                                 />
                             ) : (
                                 <img
                                     src={cat.image}
                                     alt={cat.title}
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
                                 />
                             )}
                             <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent transition-opacity ${isMobile ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'}`}></div>
