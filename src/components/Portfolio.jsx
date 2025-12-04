@@ -62,7 +62,7 @@ const Portfolio = () => {
                                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                                     initial={{ filter: 'grayscale(100%)' }}
                                     whileInView={{ filter: 'grayscale(0%)' }}
-                                    viewport={{ margin: "-20%" }}
+                                    viewport={{ margin: "-40% 0px -40% 0px" }}
                                     transition={{ duration: 0.5 }}
                                 />
                             ) : (
@@ -72,13 +72,13 @@ const Portfolio = () => {
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                                 />
                             )}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                            <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent transition-opacity ${isMobile ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'}`}></div>
 
                             <div className="absolute bottom-0 left-0 p-8 w-full">
-                                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-[var(--color-primary)] transition-colors">
+                                <h3 className={`text-2xl font-bold mb-2 text-white transition-colors ${isMobile ? 'text-[var(--color-primary)]' : 'group-hover:text-[var(--color-primary)]'}`}>
                                     {cat.title}
                                 </h3>
-                                <p className="text-[var(--color-text-muted)] transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                <p className={`text-[var(--color-text-muted)] transition-all duration-300 ${isMobile ? 'translate-y-0 opacity-100' : 'transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'}`}>
                                     {cat.desc}
                                 </p>
                             </div>
