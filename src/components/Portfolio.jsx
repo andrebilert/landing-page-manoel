@@ -3,28 +3,39 @@ import { motion } from 'framer-motion';
 
 const categories = [
     {
-        title: "Formaturas Individuais",
+        title: "Formaturas",
         image: "assets/portfolio-1.png",
-        desc: "Ensaios exclusivos e personalizados"
+        desc: "Ensaios exclusivos que capturam a sua essência e conquista."
     },
     {
-        title: "Formaturas Coletivas",
+        title: "Colação de Grau",
         image: "assets/portfolio-2.png",
-        desc: "Cobertura completa da sua turma"
+        desc: "O registro emocionante da sua cerimônia oficial."
     },
     {
-        title: "Ensaios Studio",
+        title: "Missa",
         image: "assets/portfolio-3.png",
-        desc: "Produção cinematográfica em estúdio"
+        desc: "A emoção e a fé celebradas em cada detalhe."
     },
     {
-        title: "Eventos e Bailes",
+        title: "Foto Convite",
         image: "assets/portfolio-4.png",
-        desc: "A festa mais esperada da sua vida"
+        desc: "Convites criativos para marcar a data mais esperada."
     }
 ];
 
 const Portfolio = () => {
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <section className="section bg-[var(--color-bg)]" id="portfolio">
             <div className="container">
@@ -44,11 +55,23 @@ const Portfolio = () => {
                             transition={{ delay: index * 0.1 }}
                             className="group relative h-[400px] overflow-hidden rounded-lg cursor-pointer"
                         >
-                            <img
-                                src={cat.image}
-                                alt={cat.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
+                            {isMobile ? (
+                                <motion.img
+                                    src={cat.image}
+                                    alt={cat.title}
+                                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                                    initial={{ filter: 'grayscale(100%)' }}
+                                    whileInView={{ filter: 'grayscale(0%)' }}
+                                    viewport={{ margin: "-20%" }}
+                                    transition={{ duration: 0.5 }}
+                                />
+                            ) : (
+                                <img
+                                    src={cat.image}
+                                    alt={cat.title}
+                                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                />
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
 
                             <div className="absolute bottom-0 left-0 p-8 w-full">

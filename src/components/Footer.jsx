@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     <div className="md:col-span-2">
-                        <h3 className="text-2xl font-bold mb-4 text-white">HMARCIANO Fotografia</h3>
+                        <h3 className="text-2xl font-bold mb-4 text-white">HENRIQUE MARCIANO Fotografia</h3>
                         <p className="text-[var(--color-text-muted)] max-w-sm">
                             Eternizando o momento mais importante da sua carreira acadêmica com excelência e sofisticação.
                         </p>
@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-[var(--color-border)] pt-8 text-center text-[var(--color-text-muted)] text-sm flex flex-col md:flex-row justify-between items-center gap-2">
-                    <p>&copy; {new Date().getFullYear()} Hmarciano. Todos os direitos reservados.</p>
+                    <p>&copy; {new Date().getFullYear()} Henrique Marciano. Todos os direitos reservados.</p>
                     <p>Desenvolvido por <a href="https://www.instagram.com/promptando_ia/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Promptando</a></p>
                 </div>
             </div>

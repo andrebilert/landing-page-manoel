@@ -17,10 +17,10 @@ function App() {
       <Navbar />
       <Hero />
       <Portfolio />
+      <GalleryCarousel />
       <Testimonials />
       <WhyChooseUs />
       <TrustedBy />
-      <GalleryCarousel />
       <FAQ />
       <ContactForm />
       <Footer />

@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="container flex justify-between items-center">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2">
-                    <img src="assets/logo.png" alt="Hmarciano Logo" className="h-10 md:h-16 w-auto object-contain" />
+                    <img src="assets/logo.png" alt="Henrique Marciano Logo" className="h-10 md:h-16 w-auto object-contain" />
                 </a>
 
                 {/* Desktop Menu */}
