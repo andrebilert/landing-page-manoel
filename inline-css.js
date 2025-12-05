@@ -22,7 +22,7 @@ const match = html.match(cssLinkRegex);
 if (match) {
     const cssRelativePath = match[1];
     // Remove base path and leading slash
-    const cleanPath = cssRelativePath.replace('/landing-page-manoel/', '').replace(/^\//, '');
+    const cleanPath = cssRelativePath.replace(/^\//, '');
     const cssPath = path.join(docsDir, cleanPath);
 
     if (fs.existsSync(cssPath)) {
