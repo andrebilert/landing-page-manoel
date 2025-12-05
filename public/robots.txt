@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://henriquemarciano.com.br/sitemap.xml

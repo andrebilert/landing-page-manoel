@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-bold mb-4 text-white">HENRIQUE MARCIANO Fotografia</h3>
                         <p className="text-[var(--color-text-muted)] max-w-sm">
-                            Eternizando o momento mais importante da sua carreira acadêmica com excelência e sofisticação.
+                            Eternizando o momento mais importante da sua carreira acadêmica com excelência e sofisticação. Atendendo Maringá e Região para formaturas e eventos.
                         </p>
                     </div>
 

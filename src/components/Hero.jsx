@@ -27,7 +27,7 @@ const Hero = () => {
           </h1>
 
           <div className="text-[var(--color-text-muted)] text-lg md:text-xl mb-16 max-w-2xl mx-auto font-light flex flex-col items-center gap-4">
-            <span>Mais de 10 anos de experiência em fotografia</span>
+            <span>Mais de 10 anos de experiência em fotografia em Maringá e Região</span>
             <div className="w-24 h-[2px] bg-[var(--color-primary)]"></div>
             <span>Especialista em Formaturas</span>
           </div>
