@@ -1,34 +1,21 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import WhyChooseUs from './components/WhyChooseUs';
-import TrustedBy from './components/TrustedBy';
-import GalleryCarousel from './components/GalleryCarousel';
-import ContactForm from './components/ContactForm';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LazyMotion, domAnimation } from "framer-motion"
+import Home from './pages/Home';
+import Missa from './pages/Missa';
+
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <LazyMotion features={domAnimation}>
-      <div className="min-h-screen bg-black text-white">
-        <Navbar />
-        <Hero />
-        <Portfolio />
-        <GalleryCarousel />
-        <Testimonials />
-        <WhyChooseUs />
-        <TrustedBy />
-        <FAQ />
-        <ContactForm />
-        <Footer />
-        <WhatsAppButton />
-      </div>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/missa" element={<Missa />} />
+        </Routes>
+      </Router>
     </LazyMotion>
   );
 }

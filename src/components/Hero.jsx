@@ -12,7 +12,7 @@ const Hero = () => {
           alt="Formatura"
           className="w-full h-full object-cover grayscale"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/70 to-[var(--color-bg)]/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/50 to-[var(--color-bg)]/70"></div>
       </div>
 
       <div className="container relative z-10 text-center px-4 pt-32 md:pt-0 pb-12 md:pb-0">

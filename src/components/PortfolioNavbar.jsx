@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const PortfolioNavbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,39 +16,33 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Início', href: '#' },
-        { name: 'Portfólio', href: '#portfolio' },
-        { name: 'Depoimentos', href: '#testimonials' },
-        { name: 'FAQ', href: '#faq' },
-        { name: 'Contato', href: '#contact' },
+        { name: 'Início', href: '/' },
+        { name: 'Formaturas', href: '/formaturas' },
+        { name: 'Colação de Grau', href: '/colacao' },
+        { name: 'Foto Convite', href: '/foto-convite' },
     ];
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-[var(--color-bg)]/90 backdrop-blur-md py-2'
-                : 'bg-[var(--color-bg)] md:bg-transparent py-2'
-                }`}
+            className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-[var(--color-bg)]/90 backdrop-blur-md py-2`}
         >
             <div className="container flex justify-between items-center">
                 {/* Logo */}
-                <a href="#" className="flex items-center gap-2" aria-label="Página inicial">
+                <Link to="/" className="flex items-center gap-2" aria-label="Página inicial">
                     <img src="assets/logo.webp" alt="Henrique Marciano Logo" className="h-10 md:h-16 w-auto object-contain" width="200" height="64" />
-                </a>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
-                            href={link.href}
+                            to={link.href}
                             className={`text-sm font-medium transition-colors uppercase tracking-wide ${isScrolled ? 'text-[var(--color-text-muted)]' : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]'} hover:text-[var(--color-primary)]`}
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
-
-
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -67,20 +62,19 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-[var(--color-bg)] overflow-hidden"
+                        className="md:hidden overflow-hidden"
                     >
                         <div className="container py-12 flex flex-col gap-6">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
-                                    href={link.href}
+                                    to={link.href}
                                     className="text-lg font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)]"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
-
                         </div>
                     </motion.div>
                 )}
@@ -89,4 +83,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default PortfolioNavbar;

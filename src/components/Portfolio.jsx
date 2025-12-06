@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const categories = [
@@ -14,13 +15,15 @@ const categories = [
     },
     {
         title: "Missa",
-        image: "assets/portfolio-3.webp",
-        desc: "A emoção e a fé celebradas em cada detalhe."
+        image: "assets/missa/missa-3.webp",
+        desc: "A emoção e a fé celebradas em cada detalhe.",
+        link: "/missa"
     },
     {
         title: "Foto Convite",
         image: "assets/portfolio-4.webp",
-        desc: "Convites criativos para marcar a data mais esperada."
+        desc: "Convites criativos para marcar a data mais esperada.",
+        link: "#"
     }
 ];
 
@@ -47,49 +50,58 @@ const Portfolio = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {categories.map((cat, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="group relative h-[400px] overflow-hidden rounded-lg cursor-pointer"
-                        >
-                            {isMobile ? (
-                                <motion.img
-                                    src={cat.image}
-                                    alt={cat.title}
-                                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                                    initial={{ filter: 'grayscale(100%)' }}
-                                    whileInView={{ filter: 'grayscale(0%)' }}
-                                    viewport={{ margin: "-40% 0px -40% 0px" }}
-                                    transition={{ duration: 0.5 }}
-                                    width="400"
-                                    height="400"
-                                    loading="lazy"
-                                />
-                            ) : (
-                                <img
-                                    src={cat.image}
-                                    alt={cat.title}
-                                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                                    width="400"
-                                    height="400"
-                                    loading="lazy"
-                                />
-                            )}
-                            <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent transition-opacity ${isMobile ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'}`}></div>
+                    {categories.map((cat, index) => {
+                        const CardContent = (
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                className="group relative h-[400px] overflow-hidden rounded-lg cursor-pointer"
+                            >
+                                {isMobile ? (
+                                    <motion.img
+                                        src={cat.image}
+                                        alt={cat.title}
+                                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                                        initial={{ filter: 'grayscale(100%)' }}
+                                        whileInView={{ filter: 'grayscale(0%)' }}
+                                        viewport={{ margin: "-40% 0px -40% 0px" }}
+                                        transition={{ duration: 0.5 }}
+                                        width="400"
+                                        height="400"
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    <img
+                                        src={cat.image}
+                                        alt={cat.title}
+                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                        width="400"
+                                        height="400"
+                                        loading="lazy"
+                                    />
+                                )}
+                                <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent transition-opacity ${isMobile ? 'opacity-100' : 'opacity-80 group-hover:opacity-100'}`}></div>
 
-                            <div className="absolute bottom-0 left-0 p-8 w-full">
-                                <h3 className={`text-2xl font-bold mb-2 text-white transition-colors ${isMobile ? 'text-[var(--color-primary)]' : 'group-hover:text-[var(--color-primary)]'}`}>
-                                    {cat.title}
-                                </h3>
-                                <p className={`text-[var(--color-text-muted)] transition-all duration-300 ${isMobile ? 'translate-y-0 opacity-100' : 'transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'}`}>
-                                    {cat.desc}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+                                <div className="absolute bottom-0 left-0 p-8 w-full">
+                                    <h3 className={`text-2xl font-bold mb-2 text-white transition-colors ${isMobile ? 'text-[var(--color-primary)]' : 'group-hover:text-[var(--color-primary)]'}`}>
+                                        {cat.title}
+                                    </h3>
+                                    <p className={`text-[var(--color-text-muted)] transition-all duration-300 ${isMobile ? 'translate-y-0 opacity-100' : 'transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'}`}>
+                                        {cat.desc}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        );
+
+                        return cat.link && cat.link !== '#' ? (
+                            <Link to={cat.link} key={index}>
+                                {CardContent}
+                            </Link>
+                        ) : (
+                            <div key={index}>{CardContent}</div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
