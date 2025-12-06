@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
                             <p className="text-[var(--color-text-muted)] mb-8 text-lg">
                                 Não entregamos apenas fotos, entregamos memórias eternizadas com a máxima qualidade técnica e artística.
                             </p>
-                            <a href="#contact" className="btn btn-primary">
+                            <a href="https://wa.me/554491437348" target="_blank" className="btn btn-primary">
                                 Quero agendar agora
                             </a>
                         </motion.div>
