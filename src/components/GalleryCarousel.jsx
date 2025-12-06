@@ -3,11 +3,17 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    "assets/portfolio-1.webp",
-    "assets/portfolio-2.webp",
-    "assets/portfolio-3.webp",
-    "assets/portfolio-4.webp",
-    "assets/portfolio-1.webp"
+    "/assets/portfolio-5.webp",
+    "/assets/portfolio-6.webp",
+    "/assets/portfolio-7.webp",
+    "/assets/portfolio-8.webp",
+    "/assets/portfolio-9.webp",
+    "/assets/portfolio-10.webp",
+    "/assets/portfolio-11.webp",
+    "/assets/portfolio-12.webp",
+    "/assets/portfolio-13.webp",
+    "/assets/portfolio-14.webp",
+    "/assets/portfolio-15.webp"
 ];
 
 const GalleryCarousel = () => {
@@ -42,19 +48,22 @@ const GalleryCarousel = () => {
                 }}
             >
                 {/* Left Button */}
+                {/* Left Button */}
                 <button
                     onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-                    className="absolute left-4 md:left-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-black hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    className="absolute left-4 md:left-10 z-30 p-3 rounded-full bg-transparent text-gray-300 hover:text-white hover:scale-110 transition-all drop-shadow-[0_0_10px_rgba(255,255,255,0.6)] hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]"
                     aria-label="Imagem anterior"
                 >
-                    <ChevronLeft size={24} />
+                    <ChevronLeft size={48} strokeWidth={1} />
                 </button>
 
                 {images.map((img, index) => {
-                    // Calculate relative position for animation
-                    let offset = index - activeIndex;
-                    if (offset < -2) offset += images.length;
-                    if (offset > 2) offset -= images.length;
+                    // Calculate circular distance
+                    let offset = (index - activeIndex + images.length) % images.length;
+                    // Adjust for shortest path (negative offsets)
+                    if (offset > images.length / 2) {
+                        offset -= images.length;
+                    }
 
                     // Determine styles based on offset
                     let x = 0;
@@ -62,6 +71,7 @@ const GalleryCarousel = () => {
                     let zIndex = 10;
                     let opacity = 1;
                     let rotateY = 0;
+                    let display = 'block';
 
                     if (offset === 0) {
                         // Center
@@ -77,17 +87,24 @@ const GalleryCarousel = () => {
                         zIndex = 10;
                         opacity = 0.7;
                         rotateY = offset * -15; // Slight rotation
-                    } else {
-                        // Far Left/Right (visible now)
+                    } else if (Math.abs(offset) === 2) {
+                        // Far Left/Right (visible edges)
                         x = offset * 280; // Further out but tighter
                         scale = 0.6;
                         zIndex = 5;
                         opacity = 0.4; // Visible but dim
                         rotateY = offset * -25; // More rotation
+                    } else {
+                        // Hidden items
+                        x = 0;
+                        scale = 0;
+                        zIndex = -1;
+                        opacity = 0;
+                        display = 'none';
                     }
 
-                    // Mobile adjustments
-                    if (window.innerWidth < 768) {
+                    // Mobile adjustments for visible items
+                    if (window.innerWidth < 768 && Math.abs(offset) <= 2) {
                         if (Math.abs(offset) === 1) x = offset * 120;
                         if (Math.abs(offset) === 2) x = offset * 70; // Tighter overlap on mobile
                     }
@@ -102,7 +119,8 @@ const GalleryCarousel = () => {
                                 scale,
                                 zIndex,
                                 opacity,
-                                rotateY
+                                rotateY,
+                                display
                             }}
                             transition={{
                                 duration: 0.5,
@@ -124,12 +142,13 @@ const GalleryCarousel = () => {
                 })}
 
                 {/* Right Button */}
+                {/* Right Button */}
                 <button
                     onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-                    className="absolute right-4 md:right-10 z-30 p-3 rounded-full bg-[var(--color-primary)] text-black hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    className="absolute right-4 md:right-10 z-30 p-3 rounded-full bg-transparent text-gray-300 hover:text-white hover:scale-110 transition-all drop-shadow-[0_0_10px_rgba(255,255,255,0.6)] hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]"
                     aria-label="Próxima imagem"
                 >
-                    <ChevronRight size={24} />
+                    <ChevronRight size={48} strokeWidth={1} />
                 </button>
             </motion.div>
         </section>

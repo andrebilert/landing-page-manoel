@@ -3,7 +3,7 @@ import { CheckCircle, Camera, Zap, Clock, Users, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const benefits = [
-    { icon: Camera, title: "Equipamentos de Cinema", desc: "Câmeras e lentes de última geração para qualidade 8K." },
+    { icon: Camera, title: "Equipamentos de Cinema", desc: "Câmeras e lentes de última geração." },
     { icon: Zap, title: "Iluminação Premium", desc: "Técnicas de luz avançadas para valorizar sua imagem." },
     { icon: Clock, title: "Entrega Rápida", desc: "Receba suas fotos tratadas em tempo recorde." },
     { icon: Users, title: "+500 Turmas", desc: "Experiência comprovada com grandes eventos." },

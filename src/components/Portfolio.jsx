@@ -66,11 +66,12 @@ const Portfolio = () => {
                                     <motion.img
                                         src={cat.image}
                                         alt={cat.title}
-                                        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${cat.objectPosition || 'object-center'}`}
+                                        className={`w-full h-full object-cover ${cat.objectPosition || 'object-center'}`}
+                                        style={{ willChange: "filter" }}
                                         initial={{ filter: 'grayscale(100%)' }}
                                         whileInView={{ filter: 'grayscale(0%)' }}
-                                        viewport={{ margin: "-40% 0px -40% 0px" }}
-                                        transition={{ duration: 0.5 }}
+                                        viewport={{ margin: "-10% 0px -10% 0px", amount: 0.3 }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                         width="400"
                                         height="400"
                                         loading="lazy"
