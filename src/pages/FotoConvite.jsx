@@ -4,32 +4,39 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PortfolioNavbar from '../components/PortfolioNavbar';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const Missa = () => {
+const FotoConvite = () => {
     const [selectedIndex, setSelectedIndex] = useState(null);
 
     const images = [
-        // Row 1
-        { src: 'assets/missa/missa-3.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
-        { src: 'assets/missa/missa-1.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        // Row 1: 3 Portraits
+        { src: 'assets/foto-convite/foto-convite-1.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/foto-convite/foto-convite-2.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/foto-convite/foto-convite-3.webp', className: 'col-span-1 aspect-[2/3]' },
 
-        // Row 2
-        { src: 'assets/missa/missa-2.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-6.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-7.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        // Row 2: Landscape + Portrait
+        { src: 'assets/foto-convite/foto-convite-4.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: 'assets/foto-convite/foto-convite-5.webp', className: 'col-span-1 aspect-[2/3]' },
 
-        // Row 3
-        { src: 'assets/missa/missa-8.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-4.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
+        // Row 3: 2 Portraits (Wait, need 3 for a full row, or mix)
+        // Let's do Landscape + Portrait again for 8 & 9
+        { src: 'assets/foto-convite/foto-convite-6.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/foto-convite/foto-convite-7.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/foto-convite/foto-convite-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Moving 10 here to fill row
 
-        // Row 4
-        { src: 'assets/missa/missa-9.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-5.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        // Row 4: Landscape + Portrait
+        { src: 'assets/foto-convite/foto-convite-8.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: 'assets/foto-convite/foto-convite-9.webp', className: 'col-span-1 aspect-[2/3]' },
 
-        // Row 5
-        { src: 'assets/missa/missa-11.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-12.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-13.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        // Row 5: Landscape + Portrait
+        { src: 'assets/foto-convite/foto-convite-11.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: 'assets/foto-convite/foto-convite-13.webp', className: 'col-span-1 aspect-[2/3]' },
+
+        // Row 6: Landscape + Portrait
+        { src: 'assets/foto-convite/foto-convite-12.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: 'assets/foto-convite/foto-convite-14.webp', className: 'col-span-1 aspect-[2/3]' },
+
+        // Leftover
+        { src: 'assets/foto-convite/foto-convite-15.webp', className: 'col-span-1 aspect-[2/3]' },
     ];
 
     const handleNext = (e) => {
@@ -63,7 +70,7 @@ const Missa = () => {
             <main className="pt-32 pb-20 container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 text-center">
-                        <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-4">Missa</h1>
+                        <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-4">Foto Convite</h1>
                         <div className="w-20 h-[1px] bg-white mx-auto"></div>
                     </div>
 
@@ -81,7 +88,7 @@ const Missa = () => {
                             >
                                 <img
                                     src={item.src}
-                                    alt={`Missa ${index + 1}`}
+                                    alt={`Foto Convite ${index + 1}`}
                                     className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-105"
                                     loading="lazy"
                                     decoding="async"
@@ -126,7 +133,7 @@ const Missa = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.3 }}
                                 src={images[selectedIndex].src}
-                                alt={`Missa ${selectedIndex + 1}`}
+                                alt={`Foto Convite ${selectedIndex + 1}`}
                                 className="max-w-full max-h-full object-contain shadow-2xl"
                             />
                         </div>
@@ -189,4 +196,4 @@ const Missa = () => {
     );
 };
 
-export default Missa;
+export default FotoConvite;

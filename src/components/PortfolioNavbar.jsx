@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const PortfolioNavbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,12 +16,15 @@ const PortfolioNavbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinks = [
+    const allLinks = [
         { name: 'Início', href: '/' },
-        { name: 'Formaturas', href: '/formaturas' },
+        { name: 'Missa', href: '/missa' },
+        { name: 'Festas', href: '/festas' },
         { name: 'Colação de Grau', href: '/colacao' },
         { name: 'Foto Convite', href: '/foto-convite' },
     ];
+
+    const navLinks = allLinks.filter(link => link.href !== location.pathname);
 
     return (
         <nav

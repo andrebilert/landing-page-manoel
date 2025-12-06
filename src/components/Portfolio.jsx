@@ -4,14 +4,17 @@ import { motion } from 'framer-motion';
 
 const categories = [
     {
-        title: "Formaturas",
-        image: "assets/portfolio-1.webp",
-        desc: "Ensaios exclusivos que capturam a sua essência e conquista."
+        title: "Festas",
+        image: "assets/festas/festas-16.webp",
+        desc: "Registros inesquecíveis da sua celebração com energia e espontaneidade.",
+        link: "/festas",
+        objectPosition: "object-[center_15%]"
     },
     {
         title: "Colação de Grau",
-        image: "assets/portfolio-2.webp",
-        desc: "O registro emocionante da sua cerimônia oficial."
+        image: "assets/colacao/colacao-1.webp",
+        desc: "A emoção da conquista e o brilho de uma nova etapa.",
+        link: "/colacao"
     },
     {
         title: "Missa",
@@ -21,9 +24,10 @@ const categories = [
     },
     {
         title: "Foto Convite",
-        image: "assets/portfolio-4.webp",
-        desc: "Convites criativos para marcar a data mais esperada.",
-        link: "#"
+        image: "assets/foto-convite/foto-convite-1.webp",
+        desc: "Ensaios criativos e personalizados para o seu convite de formatura.",
+        link: "/foto-convite",
+        objectPosition: "object-top"
     }
 ];
 
@@ -62,7 +66,7 @@ const Portfolio = () => {
                                     <motion.img
                                         src={cat.image}
                                         alt={cat.title}
-                                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                                        className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${cat.objectPosition || 'object-center'}`}
                                         initial={{ filter: 'grayscale(100%)' }}
                                         whileInView={{ filter: 'grayscale(0%)' }}
                                         viewport={{ margin: "-40% 0px -40% 0px" }}
@@ -75,7 +79,7 @@ const Portfolio = () => {
                                     <img
                                         src={cat.image}
                                         alt={cat.title}
-                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                        className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${cat.objectPosition || 'object-center'}`}
                                         width="400"
                                         height="400"
                                         loading="lazy"

@@ -17,7 +17,7 @@ const Footer = () => {
                         <h4 className="font-bold mb-4 text-white">Contato</h4>
                         <ul className="space-y-2 text-[var(--color-text-muted)]">
                             <li className="flex items-center gap-2"><Phone size={16} /> (44) 99143-7348</li>
-                            <li className="flex items-center gap-2"><Mail size={16} /> contato@hmarciano.com.br</li>
+                            {/* <li className="flex items-center gap-2"><Mail size={16} /> contato@hmarciano.com.br</li> */}
                             <li>Maringá - PR</li>
                         </ul>
                     </div>

@@ -4,32 +4,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PortfolioNavbar from '../components/PortfolioNavbar';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const Missa = () => {
+const Festas = () => {
     const [selectedIndex, setSelectedIndex] = useState(null);
 
     const images = [
-        // Row 1
-        { src: 'assets/missa/missa-3.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
-        { src: 'assets/missa/missa-1.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: 'assets/festas/formaturas-1.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/formaturas-2.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/formaturas-3.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/formaturas-4.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/formaturas-5.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-6.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-7.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-8.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-9.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-10.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-11.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-12.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-13.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-14.webp', className: 'col-span-1 aspect-[2/3]' },
+        // Landscape image paired with a portrait
+        { src: 'assets/festas/festas-15.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: 'assets/festas/festas-16.webp', className: 'col-span-1 aspect-[2/3]' },
 
-        // Row 2
-        { src: 'assets/missa/missa-2.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-6.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-7.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-
-        // Row 3
-        { src: 'assets/missa/missa-8.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-4.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
-
-        // Row 4
-        { src: 'assets/missa/missa-9.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-5.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-
-        // Row 5
-        { src: 'assets/missa/missa-11.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-12.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-13.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: 'assets/festas/festas-17.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-18.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-19.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-20.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-21.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-22.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: 'assets/festas/festas-23.webp', className: 'col-span-1 aspect-[2/3]' },
     ];
 
     const handleNext = (e) => {
@@ -63,7 +66,7 @@ const Missa = () => {
             <main className="pt-32 pb-20 container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 text-center">
-                        <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-4">Missa</h1>
+                        <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-4">Festas</h1>
                         <div className="w-20 h-[1px] bg-white mx-auto"></div>
                     </div>
 
@@ -81,7 +84,7 @@ const Missa = () => {
                             >
                                 <img
                                     src={item.src}
-                                    alt={`Missa ${index + 1}`}
+                                    alt={`Festas ${index + 1}`}
                                     className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-105"
                                     loading="lazy"
                                     decoding="async"
@@ -126,7 +129,7 @@ const Missa = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.3 }}
                                 src={images[selectedIndex].src}
-                                alt={`Missa ${selectedIndex + 1}`}
+                                alt={`Festas ${selectedIndex + 1}`}
                                 className="max-w-full max-h-full object-contain shadow-2xl"
                             />
                         </div>
@@ -189,4 +192,4 @@ const Missa = () => {
     );
 };
 
-export default Missa;
+export default Festas;
