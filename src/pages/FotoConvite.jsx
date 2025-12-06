@@ -9,34 +9,34 @@ const FotoConvite = () => {
 
     const images = [
         // Row 1: 3 Portraits
-        { src: 'assets/foto-convite/foto-convite-1.webp', className: 'col-span-1 aspect-[2/3]' },
-        { src: 'assets/foto-convite/foto-convite-2.webp', className: 'col-span-1 aspect-[2/3]' },
-        { src: 'assets/foto-convite/foto-convite-3.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-1.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-2.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-3.webp', className: 'col-span-1 aspect-[2/3]' },
 
         // Row 2: Landscape + Portrait
-        { src: 'assets/foto-convite/foto-convite-4.webp', className: 'col-span-1 md:col-span-2 h-full' },
-        { src: 'assets/foto-convite/foto-convite-5.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-4.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: '/assets/foto-convite/foto-convite-5.webp', className: 'col-span-1 aspect-[2/3]' },
 
         // Row 3: 2 Portraits (Wait, need 3 for a full row, or mix)
         // Let's do Landscape + Portrait again for 8 & 9
-        { src: 'assets/foto-convite/foto-convite-6.webp', className: 'col-span-1 aspect-[2/3]' },
-        { src: 'assets/foto-convite/foto-convite-7.webp', className: 'col-span-1 aspect-[2/3]' },
-        { src: 'assets/foto-convite/foto-convite-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Moving 10 here to fill row
+        { src: '/assets/foto-convite/foto-convite-6.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-7.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Moving 10 here to fill row
 
         // Row 4: Landscape + Portrait
-        { src: 'assets/foto-convite/foto-convite-8.webp', className: 'col-span-1 md:col-span-2 h-full' },
-        { src: 'assets/foto-convite/foto-convite-9.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-8.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: '/assets/foto-convite/foto-convite-9.webp', className: 'col-span-1 aspect-[2/3]' },
 
         // Row 5: Landscape + Portrait
-        { src: 'assets/foto-convite/foto-convite-11.webp', className: 'col-span-1 md:col-span-2 h-full' },
-        { src: 'assets/foto-convite/foto-convite-13.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-11.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: '/assets/foto-convite/foto-convite-13.webp', className: 'col-span-1 aspect-[2/3]' },
 
         // Row 6: Landscape + Portrait
-        { src: 'assets/foto-convite/foto-convite-12.webp', className: 'col-span-1 md:col-span-2 h-full' },
-        { src: 'assets/foto-convite/foto-convite-14.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-12.webp', className: 'col-span-1 md:col-span-2 h-full' },
+        { src: '/assets/foto-convite/foto-convite-14.webp', className: 'col-span-1 aspect-[2/3]' },
 
         // Leftover
-        { src: 'assets/foto-convite/foto-convite-15.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/foto-convite/foto-convite-15.webp', className: 'col-span-1 aspect-[2/3]' },
     ];
 
     const handleNext = (e) => {

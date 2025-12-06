@@ -5,26 +5,26 @@ import { motion } from 'framer-motion';
 const categories = [
     {
         title: "Festas",
-        image: "assets/festas/festas-16.webp",
+        image: "/assets/festas/festas-16.webp",
         desc: "Registros inesquecíveis da sua celebração com energia e espontaneidade.",
         link: "/festas",
         objectPosition: "object-[center_15%]"
     },
     {
         title: "Colação de Grau",
-        image: "assets/colacao/colacao-1.webp",
+        image: "/assets/colacao/colacao-1.webp",
         desc: "A emoção da conquista e o brilho de uma nova etapa.",
         link: "/colacao"
     },
     {
         title: "Missa",
-        image: "assets/missa/missa-3.webp",
+        image: "/assets/missa/missa-3.webp",
         desc: "A emoção e a fé celebradas em cada detalhe.",
         link: "/missa"
     },
     {
         title: "Foto Convite",
-        image: "assets/foto-convite/foto-convite-1.webp",
+        image: "/assets/foto-convite/foto-convite-1.webp",
         desc: "Ensaios criativos e personalizados para o seu convite de formatura.",
         link: "/foto-convite",
         objectPosition: "object-top"

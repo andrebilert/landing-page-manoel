@@ -8,8 +8,8 @@ const Colacao = () => {
     const [selectedIndex, setSelectedIndex] = useState(null);
 
     const images = [
-        { src: 'assets/colacao/colacao-1.webp', className: 'col-span-1 aspect-[2/3]' },
-        { src: 'assets/colacao/colacao-2.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/colacao/colacao-1.webp', className: 'col-span-1 aspect-[2/3]' },
+        { src: '/assets/colacao/colacao-2.webp', className: 'col-span-1 aspect-[2/3]' },
     ];
 
     const handleNext = (e) => {

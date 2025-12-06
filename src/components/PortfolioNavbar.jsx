@@ -33,7 +33,7 @@ const PortfolioNavbar = () => {
             <div className="container flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2" aria-label="Página inicial">
-                    <img src="assets/logo.webp" alt="Henrique Marciano Logo" className="h-10 md:h-16 w-auto object-contain" width="200" height="64" />
+                    <img src="/assets/logo.webp" alt="Henrique Marciano Logo" className="h-10 md:h-16 w-auto object-contain" width="200" height="64" />
                 </Link>
 
                 {/* Desktop Menu */}

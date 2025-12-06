@@ -9,27 +9,27 @@ const Missa = () => {
 
     const images = [
         // Row 1
-        { src: 'assets/missa/missa-3.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
-        { src: 'assets/missa/missa-1.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-3.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
+        { src: '/assets/missa/missa-1.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
 
         // Row 2
-        { src: 'assets/missa/missa-2.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-6.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-7.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-2.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-6.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-7.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
 
         // Row 3
-        { src: 'assets/missa/missa-8.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-4.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
+        { src: '/assets/missa/missa-8.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-4.webp', className: 'col-span-1 md:col-span-2 h-full' }, // Horizontal
 
         // Row 4
-        { src: 'assets/missa/missa-9.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-5.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-9.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-5.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-10.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
 
         // Row 5
-        { src: 'assets/missa/missa-11.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-12.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
-        { src: 'assets/missa/missa-13.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-11.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-12.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
+        { src: '/assets/missa/missa-13.webp', className: 'col-span-1 aspect-[2/3]' }, // Portrait
     ];
 
     const handleNext = (e) => {
